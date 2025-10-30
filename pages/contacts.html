@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Контакты - Портфолио студента</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.11.1/font/bootstrap-icons.css">
+    </head>
+    <body class="bg-light">
+        <div class="container-fluid p-0">
+            <header class="bg-primary text-white py-2">
+                <div class="container">
+                    <div class="row text-center ">
+                        <img src="../images/logotype.jpg" class="img-fluid rounded mh-50" style="max-height: 100px; object-fit: scale-down;" alt="логотип">
+                    </div>
+                    <div class="row text-center">
+                        <h1 class="h3 py-3">Жужлева Ксения Александровна</h1>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/projects.html">Проекты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/diary.html">Дневник</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../pages/contacts.html" aria-current="page">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="container-fluid my-5">
+                <section class="mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-header">
+                                    <h3 class="card-title h5 text-center">Свяжитесь со мной</h3>
+                                </div>
+                                <div class="card-body p-4">
+                                    <form onsubmit="alert('Спасибо, ваше обращение отправлено!')">
+                                        <div class="mb-3">
+                                            <label for="inputName" class="form-label">Имя</label>
+                                            <input type="text" class="form-control" id="inputName" maxlength="30" required aria-describedby="nameHelp">
+                                            <div id="nameHelp" class="form-text">Введите ваше имя (не более 30 символов)</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+                                            <div id="emailHelp" class="form-text">Введите ваш email в формате example@mail.ru</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputMessage" class="form-label">Сообщение</label>
+                                            <input type="textarea" class="form-control" id="inputMessage" maxlength="200" required aria-describedby="messageHelp">
+                                            <div id="messageHelp" class="form-text">Введите ваше сообщение (не более 200 символов)</div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-header">
+                                    <h3 class="card-title h5 text-center">Контакты</h3>
+                                </div>
+                                <div class="card-body p-4">
+                                    <p>
+                                        <img src="../images/icons/envelope.svg" alt="Конверт" width="20" height="20" class="d-inline-block align-text-top">
+                                        zhuzhleva.k.a@edu.mirea.ru
+                                    </p>
+                                    <p>
+                                        <img src="../images/icons/computer.svg" alt="Компьютер" width="20" height="20" class="d-inline-block align-text-top">
+                                        GitHub: ksenia-zh13579
+                                    </p>
+                                    <p>
+                                        <img src="../images/icons/location.svg" alt="Метка" width="20" height="20" class="d-inline-block align-text-top">
+                                        Москва, Россия
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-dark text-white py-4 mt-5">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">&copy; 2025</p>
+                        </div>
+                        <div class="col-md-6 text-md-start">
+                            <a href="../pages/contacts.html" class="text-white text-decoration-none">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
