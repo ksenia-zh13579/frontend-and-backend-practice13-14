@@ -9,6 +9,8 @@ btnClose.addEventListener('click', () => {
 });
 
 form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
     if (form.checkValidity())
     {
         event.preventDefault();
@@ -25,4 +27,10 @@ form.addEventListener('submit', (event) => {
         let modal = bootstrap.Modal.getInstance(document.getElementById('modalAddProgress'));
         modal.hide();
     }
+    else
+    {
+        event.stopPropagation();
+    }
+
+    form.classList.add('was-validated');
 });

@@ -6,9 +6,11 @@
         <title>Контакты - Портфолио студента</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../styles/styles.css">
     </head>
     <body class="bg-light">
-        <div class="container-fluid p-0">
+        <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+        <div class="container-fluid p-0 page">
             <header class="bg-primary text-white py-2">
                 <div class="container">
                     <div class="row text-center ">
@@ -20,10 +22,10 @@
                 </div>
             </header>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Открытие/закрытие списка навигации">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarContent">
                         <ul class="navbar-nav">
@@ -44,7 +46,7 @@
                 </div>
             </nav>
 
-            <main class="container-fluid my-5">
+            <main id="main" class="container-fluid my-5">
                 <section class="mb-5">
                     <div class="row justify-content-center">
                         <div class="col-md-6">
@@ -53,21 +55,34 @@
                                     <h3 class="card-title h5 text-center">Свяжитесь со мной</h3>
                                 </div>
                                 <div class="card-body p-4">
-                                    <form onsubmit="alert('Спасибо, ваше обращение отправлено!')">
+                                    <form
+                                    aria-label="Форма для связи" aria-describedby="contactFormDescr" novalidate>
+                                        <span class="visually-hidden" id="contactFormDescr">
+                                            Форма, чтобы оставить контактные данные и сообщение
+                                        </span>
                                         <div class="mb-3">
                                             <label for="inputName" class="form-label">Имя</label>
-                                            <input type="text" class="form-control" id="inputName" maxlength="30" required aria-describedby="nameHelp">
-                                            <div id="nameHelp" class="form-text">Введите ваше имя (не более 30 символов)</div>
+                                            <input type="text" class="form-control" id="inputName" maxlength="30" required aria-describedby="nameHelp nameError">
+                                            <div id="nameHelp" class="form-text-small visually-hidden-focusable">Введите ваше имя (не более 30 символов)</div>
+                                            <div class="invalid-feedback" id="nameError" role="alert">
+                                                Пожалуйста, введите ваше имя.
+                                            </div>
                                         </div>
                                         <div class="mb-3">
                                             <label for="inputEmail" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
-                                            <div id="emailHelp" class="form-text">Введите ваш email в формате example@mail.ru</div>
+                                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp emailError" required placeholder="example@gmail.com">
+                                            <div id="emailHelp" class="form-text-small visually-hidden-focusable">Введите ваш email</div>
+                                            <div class="invalid-feedback" id="emailError" role="alert">
+                                                Пожалуйста, введите ваш email.
+                                            </div>
                                         </div>
                                         <div class="mb-3">
                                             <label for="inputMessage" class="form-label">Сообщение</label>
-                                            <input type="textarea" class="form-control" id="inputMessage" maxlength="200" required aria-describedby="messageHelp">
-                                            <div id="messageHelp" class="form-text">Введите ваше сообщение (не более 200 символов)</div>
+                                            <input type="textarea" class="form-control" id="inputMessage" maxlength="200" required aria-describedby="messageHelp messageError">
+                                            <div id="messageHelp" class="form-text-small visually-hidden-focusable">Введите ваше сообщение (не более 200 символов)</div>
+                                            <div class="invalid-feedback" id="messageError" role="alert">
+                                                Поле с сообщением не может быть пустым.
+                                            </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                                     </form>
@@ -75,6 +90,7 @@
                             </div>
                         </div>
                     </div>
+                    <script src="../scripts/contacts.js"></script>
                 </section>
                 
                 <section class="mb-5">
@@ -86,15 +102,15 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <p>
-                                        <img src="../images/icons/envelope.svg" alt="Конверт" width="20" height="20" class="d-inline-block align-text-top">
+                                        <img src="../images/icons/envelope.svg" alt="Конверт" width="20" height="20" class="d-inline-block align-text-top" aria-hidden="true">
                                         zhuzhleva.k.a@edu.mirea.ru
                                     </p>
                                     <p>
-                                        <img src="../images/icons/computer.svg" alt="Компьютер" width="20" height="20" class="d-inline-block align-text-top">
+                                        <img src="../images/icons/computer.svg" alt="Компьютер" width="20" height="20" class="d-inline-block align-text-top" aria-hidden="true">
                                         GitHub: ksenia-zh13579
                                     </p>
                                     <p>
-                                        <img src="../images/icons/location.svg" alt="Метка" width="20" height="20" class="d-inline-block align-text-top">
+                                        <img src="../images/icons/location.svg" alt="Метка" width="20" height="20" class="d-inline-block align-text-top" aria-hidden="true">
                                         Москва, Россия
                                     </p>
                                 </div>
@@ -104,7 +120,7 @@
                 </section>
             </main>
 
-            <footer class="bg-dark text-white py-4 mt-5">
+            <footer class="bg-dark text-white py-4 mt-5 footer">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-md-6 text-md-end">

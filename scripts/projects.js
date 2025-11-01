@@ -1,5 +1,7 @@
 function filter(btnId)
 {
+    btnId.setAttribute('aria-pressed', 'true');
+
     let projectsContainers = document.getElementsByName('projectContainer');
 
     for (let projCont of projectsContainers)
