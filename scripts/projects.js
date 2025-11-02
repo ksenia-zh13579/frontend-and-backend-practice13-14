@@ -2,7 +2,7 @@ function filter(btnId)
 {
     btnId.setAttribute('aria-pressed', 'true');
 
-    let projectsContainers = document.getElementsByName('projectContainer');
+    let projectsContainers = document.getElementsByClassName('projectContainer');
 
     for (let projCont of projectsContainers)
     {
