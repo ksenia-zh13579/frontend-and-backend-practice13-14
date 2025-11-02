@@ -64,7 +64,9 @@
                                             Форма, чтобы оставить контактные данные и сообщение
                                         </span>
                                         <div class="mb-3">
-                                            <label for="inputName" class="form-label">Имя</label>
+                                            <label for="inputName" class="form-label">
+                                                Имя <span class="text-danger" aria-hidden="true">*</span>
+                                            </label>
                                             <input type="text" class="form-control" id="inputName" maxlength="30" required aria-describedby="nameHelp nameError">
                                             <div id="nameHelp" class="form-text-small visually-hidden">Введите ваше имя (не более 30 символов)</div>
                                             <div class="invalid-feedback" id="nameError" role="alert">
@@ -72,7 +74,9 @@
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="inputEmail" class="form-label">Email</label>
+                                            <label for="inputEmail" class="form-label">
+                                                Email <span class="text-danger" aria-hidden="true">*</span>
+                                            </label>
                                             <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp emailError" required placeholder="example@gmail.com">
                                             <div id="emailHelp" class="form-text-small visually-hidden">Введите ваш email</div>
                                             <div class="invalid-feedback" id="emailError" role="alert">
@@ -80,7 +84,9 @@
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="inputMessage" class="form-label">Сообщение</label>
+                                            <label for="inputMessage" class="form-label">
+                                                Сообщение <span class="text-danger" aria-hidden="true">*</span>
+                                            </label>
                                             <textarea class="form-control" id="inputMessage" maxlength="200" 
                                             placeholder="Сообщение (не более 200 символов)" required 
                                             aria-describedby="messageHelp messageError"></textarea>
